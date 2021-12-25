@@ -1,0 +1,82 @@
+rm ~/.termux/colors.properties
+echo "# Termux Dark Style by ArieSR91
+foreground=#bbbbbb
+background=#111111
+cursor=#bbbbbb
+
+color0=#111111
+color1=#ff4136
+color2=#2ecc40
+color3=#ffdc00
+color4=#0074d9
+color5=#b10dc9
+color6=#7fdbff
+color7=#bbbbbb
+color8=#777777
+color9=#ff4136
+color10=#2ecc40
+color11=#ffdc00
+color12=#0074d9
+color13=#b10dc9
+color14=#7fdbff
+color15=#ffffff
+
+color16=#ff851b
+color17=#85144b
+color18=#333333
+color19=#555555
+color20=#999999
+color21=#dddddd" >> ~/.termux/colors.properties
+echo "######################
+extra-keys-style = all
+###############
+Bell key
+###############
+
+### Vibrate device (default).
+bell-character = vibrate
+
+### Beep with a sound.
+bell-character = beep" >> ~/.termux/termux.properties
+rm ../usr/etc/bash.bashrc
+echo "# kali-linux bashrc by ArieSR91
+# Command history tweaks:
+# - Append history instead of overwriting
+#   when shell exits.
+# - When using history substitution, do not
+#   exec command immediately.
+# - Do not save to history commands starting
+#   with space.
+# - Do not save duplicated commands.
+shopt -s histappend
+shopt -s histverify
+export HISTCONTROL=ignoreboth
+
+# Default command line prompt.
+PS1='\[\033[1;92m\]┌──(\[\033[1;34m\]\u\[\033[1;97m\]〄\[\033[1;34m\]\h\[\033[1;92m\])-[\[\033[0;97m\]\w\[\033[1;92m\]]
+\[\033[1;92m\]└─\[\033[1;34m\]$ \[\033[0;97m\]'
+
+# Handles nonexistent commands.
+# If user has entered command which invokes non-available
+# utility, command-not-found will give a package suggestions.
+if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
+	command_not_found_handle() {
+		/data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
+	}
+fi" >> ../usr/etc/bash.bashrc
+echo "
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+alias c='clear'
+alias x='exit'
+alias cl='clear'
+alias clr='clear'
+alias cls='clear'
+alias nn='nano'
+alias nf='neofetch'
+alias py2='python2'
+alias py3='python3'
+" >> .bashrc
+termux-reload-settings
+clear
