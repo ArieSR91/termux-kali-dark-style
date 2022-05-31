@@ -1,3 +1,4 @@
+rm ~/.bashrc
 rm ~/.termux/colors.properties
 echo "# Termux Dark Style by ArieSR91
 foreground=#bbbbbb
