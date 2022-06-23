@@ -27,7 +27,10 @@ color18=#333333
 color19=#555555
 color20=#999999
 color21=#dddddd" >> ~/.termux/colors.properties
-echo "######################
+echo "##########################################
+extra-keys = [['ESC','/','-','HOME','UP','END','PGUP','KEYBOARD'], \
+              ['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN','BKSP']]
+######################
 extra-keys-style = all
 ###############
 Bell key
