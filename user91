@@ -27,9 +27,10 @@ color18=#333333
 color19=#555555
 color20=#999999
 color21=#dddddd" >> ~/.termux/colors.properties
-echo "########## Extra-keys-by-ArieSR91 ###########
+echo "
+########## Extra-keys-by-ArieSR91 ###########
 extra-keys = [['ESC','/','-','HOME','UP','END','PGUP','KEYBOARD'], \
-              ['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN','BKSP']]
+              ['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN','DEL']]
 ######################
 extra-keys-style = all
 ###############
